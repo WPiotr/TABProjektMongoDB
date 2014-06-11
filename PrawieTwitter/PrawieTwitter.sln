@@ -1,7 +1,11 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2012
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PrawieTwitter", "PrawieTwitter\PrawieTwitter.csproj", "{36396658-0925-44D8-8193-EC143A15C1F2}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PrawieTwitter.Library", "PrawieTwitter.Library\PrawieTwitter.Library.csproj", "{CCEBA631-D4EC-4B8F-A902-8118EC6DA49E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PrawieTwitter.Test", "PrawieTwitter.Test\PrawieTwitter.Test.csproj", "{A06EF949-92C6-4B8B-A4CD-6BE3A2873C39}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PrawieTwitter.App", "PrawieTwitter.App\PrawieTwitter.App.csproj", "{A0B19CA6-8965-4114-B727-F18300BB0C61}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -9,10 +13,18 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{36396658-0925-44D8-8193-EC143A15C1F2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{36396658-0925-44D8-8193-EC143A15C1F2}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{36396658-0925-44D8-8193-EC143A15C1F2}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{36396658-0925-44D8-8193-EC143A15C1F2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CCEBA631-D4EC-4B8F-A902-8118EC6DA49E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CCEBA631-D4EC-4B8F-A902-8118EC6DA49E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CCEBA631-D4EC-4B8F-A902-8118EC6DA49E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CCEBA631-D4EC-4B8F-A902-8118EC6DA49E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A06EF949-92C6-4B8B-A4CD-6BE3A2873C39}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A06EF949-92C6-4B8B-A4CD-6BE3A2873C39}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A06EF949-92C6-4B8B-A4CD-6BE3A2873C39}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A06EF949-92C6-4B8B-A4CD-6BE3A2873C39}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A0B19CA6-8965-4114-B727-F18300BB0C61}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A0B19CA6-8965-4114-B727-F18300BB0C61}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A0B19CA6-8965-4114-B727-F18300BB0C61}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A0B19CA6-8965-4114-B727-F18300BB0C61}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

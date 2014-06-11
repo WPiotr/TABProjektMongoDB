@@ -1,0 +1,87 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site.master.cs" Inherits="PrawieTwitter.App.Site" %>
+
+<%@ Import Namespace="PrawieTwitter.Library.Entities" %>
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title>Home Page</title>
+    <link href="~/Content/bc-stylesheet.css" rel="stylesheet" type="text/css" />
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form runat="server" id="form">
+        <div id="container">
+            <div id="header">
+                <div>
+                    <h1>
+                        <% if (IsLogin())
+                           {%>
+                        <label runat="server">Witaj, <% Response.Write(((User)Session["LoginUser"]).FirstName + " " + ((User)Session["LoginUser"]).LastName); %></label><br />
+                        <asp:LinkButton runat="server" Text="Wyloguj" OnClick="Logout" />
+                        <%}
+                           else
+                           { %>
+                        <label runat="server">Proszę się zalogować</label>
+                        <%} %>
+                    </h1>
+                </div>
+            </div>
+            <div id="content">
+                <div id="right">
+                    <asp:ContentPlaceHolder runat="server" ID="Content" />
+                </div>
+                <div id="left">
+                    <% if (!IsLogin())
+                       {  %>
+                    <asp:Login OnAuthenticate="Login"
+                        ID="LoginPanel"
+                        UserNameLabelText="Email: "
+                        runat="server"
+                        CreateUserUrl="~/Views/Register"
+                        CreateUserText="Rejestracja" />
+                    <%}
+                       else
+                       {%>
+                    <h2><em>Menu</em></h2>
+                    <table>
+                        <tr>
+                            <td>
+                                <label>Wyszukiwanie:</label>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <label>Imie:</label></td>
+                            <td>
+                                <asp:TextBox ID="firstName" runat="server" /></td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <label>Nazwisko:</label></td>
+                            <td>
+                                <asp:TextBox ID="lastName" runat="server" /></td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <asp:Button runat="server" Text="szukaj" OnClick="Search" /></td>
+                        </tr>
+                    </table>
+
+                    <ul>
+                        <li><a>
+                            <asp:LinkButton PostBackUrl="~/Views/Profile" runat="server" Text="Twój profil" /></a></li>
+                        <li><a>
+                            <asp:LinkButton PostBackUrl="~/Views/YourWall.aspx" runat="server" Text="Twój wall" /></a></li>
+
+                    </ul>
+                    <%} %>
+                </div>
+            </div>
+        </div>
+        <div id="footer">
+        </div>
+    </form>
+</body>
+</html>
